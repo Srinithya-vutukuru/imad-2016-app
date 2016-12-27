@@ -120,8 +120,9 @@ app.get('/paras', function (req, res) {//URL:/paras?para=bkxbk
   //json converts objects into strings and vice versa
   res.send(JSON.stringify(paras));
 });
+var count=0;
 app.get('/counters', function (req, res) {
-   counters.content='this is new';
+   counters.content='this website is viewd'+count +'times';
    res.send(createTemplate(counters));
 });
 app.get('/:articleName', function (req, res) {
