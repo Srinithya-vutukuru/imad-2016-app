@@ -4,7 +4,6 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var count=0;
 var articles={
      'article-one':{
       title:'article-one | nithya',
@@ -41,10 +40,14 @@ var articles={
     }
 };
 var counters={
+  count :0,
+  add: function(){
+    this.count +=1;  
+  },
   title :'counters | nithya',
   heading:'Counters',
   date:'dec 27,2016',
-  content: 'this button is clicked '+ count +' times'
+  content: 'this button is clicked '+ this.count +' times'
     
 };
 function createTemplate(data){
@@ -119,7 +122,7 @@ app.get('/paras', function (req, res) {//URL:/paras?para=bkxbk
   res.send(JSON.stringify(paras));
 });
 app.get('/counters', function (req, res) {
-    count +=1;
+    counters.add();
    res.send(createTemplate(counters));
 });
 app.get('/:articleName', function (req, res) {
