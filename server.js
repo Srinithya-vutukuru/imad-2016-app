@@ -41,9 +41,6 @@ var articles={
 };
 var counters={
   count :0,
-  add: function(){
-    this.count +=1;  
-  },
   title :'counters | nithya',
   heading:'Counters',
   date:'dec 27,2016',
@@ -122,7 +119,7 @@ app.get('/paras', function (req, res) {//URL:/paras?para=bkxbk
   res.send(JSON.stringify(paras));
 });
 app.get('/counters', function (req, res) {
-    counters.add();
+    counters.count +=1;
    res.send(createTemplate(counters));
 });
 app.get('/:articleName', function (req, res) {
