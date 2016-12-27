@@ -40,11 +40,11 @@ var articles={
     }
 };
 var counters={
-  count :0,
+  count :1,
   title :'counters | nithya',
   heading:'Counters',
   date:'dec 27,2016',
-  content: 'this button is clicked  0 times'
+  content: 'this button is clicked '+this.count + 'times'
     
 };
 function createTemplate(data){
