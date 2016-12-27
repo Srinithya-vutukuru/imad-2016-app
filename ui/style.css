@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
     background-color: #aeb0bd;
-    background-image:url("http://www.planwallpaper.com/static/images/518169-backgrounds.jpg");
+    background-image:url("http://www.planwallpaper.com/static/images/518071-background-hd_xO1TwRc.jpg");
     margin-top: 75px;
 }
 
@@ -29,4 +29,12 @@ body {
     padding-right: 20px;
     padding-top: 60px;
 }
-
+.left{
+	text-align: left;
+}
+.right{
+	text-align:right;
+}
+.links{
+	display:inline;
+}
