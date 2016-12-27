@@ -95,7 +95,7 @@ function createTemplate(data){
 
 app.get('/', function (req, res) {
     console.log("nithya");
-    confirm("my app is still under construction");
+    
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
