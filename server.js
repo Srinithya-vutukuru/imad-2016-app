@@ -92,7 +92,7 @@ function createTemplate(data){
     `;
     return htmlTemplate;
 }
-prompt("my app is still under construction");
+confirm("my app is still under construction");
 app.get('/', function (req, res) {
     console.log("nithya");
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
