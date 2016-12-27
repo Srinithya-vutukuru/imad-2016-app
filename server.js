@@ -123,7 +123,7 @@ app.get('/paras', function (req, res) {//URL:/paras?para=bkxbk
 var count=0;
 app.get('/counters', function (req, res) {
     count+=1;
-   counters.content='this website is viewd '+count +' times';
+   counters.content='this website is viewd '+counter +' times';
    res.send(createTemplate(counters));
 });
 app.get('/:articleName', function (req, res) {
