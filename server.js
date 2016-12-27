@@ -38,14 +38,14 @@ var articles={
                 </p>`
       
         
-    },
-    'counters':{
-       title:'counters | nithya',
-       heading:'counters',
-       date:'27 dec,2016',
-       content:'this is clicked'+ count + 'times'
-        
     }
+};
+var counters={
+  title :'counters | nithya',
+  heading:'Counters',
+  date:'dec 27,2016',
+  content: 'this button is clicked '+ count +' times'
+    
 };
 function createTemplate(data){
     var date=data.date;
@@ -120,7 +120,7 @@ app.get('/paras', function (req, res) {//URL:/paras?para=bkxbk
 });
 app.get('/counters', function (req, res) {
     count +=1;
-   res.send(createTemplate(articles[counters]));
+   res.send(createTemplate(counters));
 });
 app.get('/:articleName', function (req, res) {
     var articleName=req.params.articleName;
