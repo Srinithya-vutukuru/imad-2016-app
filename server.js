@@ -93,13 +93,12 @@ function createTemplate(data){
 }
 
 app.get('/', function (req, res) {
-    console.log("nithya");
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 var counter=0;
 app.get('/counter', function (req, res) {
-  counter += 1;
+  counter += 2;
   res.send(counter.toString());
 });
 
