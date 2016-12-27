@@ -120,7 +120,7 @@ app.get('/paras', function (req, res) {//URL:/paras?para=bkxbk
   res.send(JSON.stringify(paras));
 });
 app.get('/counters', function (req, res) {
-   counters.count += 1;
+   //counters.count += 1;
    res.send(createTemplate(counters));
 });
 app.get('/:articleName', function (req, res) {
