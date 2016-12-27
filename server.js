@@ -93,6 +93,7 @@ function createTemplate(data){
 }
 
 app.get('/', function (req, res) {
+    console.log("nithya");
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
