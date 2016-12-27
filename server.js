@@ -118,14 +118,15 @@ app.get('/paras', function (req, res) {//URL:/paras?para=bkxbk
   //json converts objects into strings and vice versa
   res.send(JSON.stringify(paras));
 });
-app.get('/:articleName', function (req, res) {
-    var articleName=req.params.articleName;
-   res.send(createTemplate(articles[articleName]));
-});
 app.get('/counters', function (req, res) {
     count +=1;
    res.send(createTemplate(articles[counters]));
 });
+app.get('/:articleName', function (req, res) {
+    var articleName=req.params.articleName;
+   res.send(createTemplate(articles[articleName]));
+});
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
