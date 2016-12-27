@@ -4,6 +4,7 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
+var count=0;
 var articles={
      'article-one':{
       title:'article-one | nithya',
@@ -36,6 +37,13 @@ var articles={
                     this is my third webpage.
                 </p>`
       
+        
+    },
+    'counters':{
+       title:'counters | nithya',
+       heading:'counters',
+       date:'27 dec,2016',
+       content:'this is clicked'+ count + 'times'
         
     }
 };
@@ -113,6 +121,10 @@ app.get('/paras', function (req, res) {//URL:/paras?para=bkxbk
 app.get('/:articleName', function (req, res) {
     var articleName=req.params.articleName;
    res.send(createTemplate(articles[articleName]));
+});
+app.get('/counters', function (req, res) {
+    count +=1;
+   res.send(createTemplate(articles[counters]));
 });
 
 app.get('/ui/style.css', function (req, res) {
