@@ -120,6 +120,7 @@ app.get('/paras', function (req, res) {//URL:/paras?para=bkxbk
 });
 app.get('/counters', function (req, res) {
     counters.count += 1;
+    console.log(counters.count);
    res.send(createTemplate(counters));
 });
 app.get('/:articleName', function (req, res) {
