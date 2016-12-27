@@ -39,13 +39,12 @@ var articles={
         
     }
 };
-var count =1;
 var counters={
   
   title :'counters | nithya',
   heading:'Counters',
-  date:'dec 27,2016',
-  content: 'this button is clicked '+ count + ' times'
+  date:'dec 27,2016'
+  
     
 };
 function createTemplate(data){
@@ -122,7 +121,7 @@ app.get('/paras', function (req, res) {//URL:/paras?para=bkxbk
   res.send(JSON.stringify(paras));
 });
 app.get('/counters', function (req, res) {
-   count=2;
+   counters.content='this is new';
    res.send(createTemplate(counters));
 });
 app.get('/:articleName', function (req, res) {
