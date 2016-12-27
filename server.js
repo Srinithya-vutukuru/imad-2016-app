@@ -44,7 +44,7 @@ var counters={
   title :'counters | nithya',
   heading:'Counters',
   date:'dec 27,2016',
-  content: 'this button is clicked '+ this.count + 'times'
+  content: 'this button is clicked '+ 0 + ' times'
     
 };
 function createTemplate(data){
