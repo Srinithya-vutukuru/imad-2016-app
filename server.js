@@ -170,14 +170,14 @@ app.get('/paras', function (req, res) {//URL:/paras?para=bkxbk
 });
 var names1 = [];
 var list = '';
+var i=0;
 app.get('/submit-name1', function (req, res) {//URL:/subit-name?name=bkxbk
   //get the name from request
   var name1= req.query.name1;
   names1.push(name1);
-  for(var i=0;i<names1.length;i++)
-  {
+ 
   list +='<li>' +names1[i] + '</li>';
-  }
+  i++;
   nam.content=list;
   res.send(createComments(nam));
 });
