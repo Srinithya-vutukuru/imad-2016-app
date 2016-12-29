@@ -47,6 +47,14 @@ var counters={
   
     
 };
+var nam={
+  
+  title :'names | nithya',
+  heading:'names',
+  date:'dec 27,2016'
+  
+    
+};
 function createTemplate(data){
     var date=data.date;
     var title=data.title;
@@ -119,6 +127,15 @@ app.get('/paras', function (req, res) {//URL:/paras?para=bkxbk
   paras.push(para);
   //json converts objects into strings and vice versa
   res.send(JSON.stringify(paras));
+});
+var names1 = [];
+app.get('/submit-name1', function (req, res) {//URL:/subit-name?name=bkxbk
+  //get the name from request
+  var name1= req.query.name1;
+  names1.push(name1);
+  //json converts objects into strings and vice versa
+  nam.content=(JSON.stringify(names1));
+  res.send(createTemplate(nam));
 });
 var count=0;
 app.get('/counters', function (req, res) {
