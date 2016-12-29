@@ -53,6 +53,9 @@ var nam={
   heading:'names',
  };
 function createComments(data){
+    var title=data.title;
+    var heading=data.heading;
+    var content=data.content;
     var html_comments=`
     <html>
         <head>
