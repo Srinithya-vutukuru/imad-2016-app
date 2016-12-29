@@ -81,9 +81,9 @@ function createComments(data){
 						${heading}
 					</h3>
 					
-					<div class="center text-big bold">
-					content is :
-					
+					<div >
+					comments are :
+					<hr/>
 					<ul>
 					  ${content}
 					</ul>	
@@ -171,13 +171,11 @@ app.get('/submit-name', function (req, res) {//URL:/paras?para=bkxbk
 });
 var list = '';
 var i=0;
-app.get('/submitname', function (req, res) {//URL:/subit-name?name=bkxbk
+app.get('/submitcomments', function (req, res) {//URL:/subit-name?name=bkxbk
   //get the name from request
-  //var name= req.query.name;
-  //names.push(name);
-  while(i<names.length)
+  while(i<paras.length)
   {
-  list +='<li>' +names[i] + '</li>';
+  list +='<li>' +paras[i] + '</li>' + '<hr/>';
   i++;
   }
   nam.content=list;
