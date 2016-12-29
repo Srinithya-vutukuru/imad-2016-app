@@ -133,13 +133,8 @@ app.get('/submit-name1', function (req, res) {//URL:/subit-name?name=bkxbk
   //get the name from request
   var name1= req.query.name1;
   names1.push(name1);
-  var list='';
-  //json converts objects into strings and vice versa
-	for(var i=0;i<para.length;i++)
-	{
-		list[i] += '<li>' + names1[i] + '</li>';
-	}
-  nam.content=list;	
+ 
+  nam.content=names1;	
   res.send(createTemplate(nam));
 });
 var count=0;
