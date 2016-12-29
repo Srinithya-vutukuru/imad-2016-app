@@ -126,6 +126,7 @@ function createTemplate(data){
 					</div>
 				
 					<div class="center text-big bold">
+					  content is:
 					  ${content}
 						
 					</div>
