@@ -84,9 +84,9 @@ function createComments(data){
 					<div class="center text-big bold">
 					content is :
 					
-					
+					<ul>
 					  ${content}
-						
+					</ul>	
 					</div>
 				</div>
 			</body>
