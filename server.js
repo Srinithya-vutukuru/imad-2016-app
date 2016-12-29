@@ -152,14 +152,14 @@ app.get('/counter', function (req, res) {
   res.send(counter.toString());
 });
 
-var names = [];
+/*var names = [];
 app.get('/submit-name', function (req, res) {//URL:/subit-name?name=bkxbk
   //get the name from request
   var name= req.query.name;
   names.push(name);
   //json converts objects into strings and vice versa
   res.send(JSON.stringify(names));
-});
+});*/
 var paras = [];
 app.get('/paras', function (req, res) {//URL:/paras?para=bkxbk
   //get the name from request
@@ -168,16 +168,16 @@ app.get('/paras', function (req, res) {//URL:/paras?para=bkxbk
   //json converts objects into strings and vice versa
   res.send(JSON.stringify(paras));
 });
-var names1 = [];
+//var names1 = [];
 var list = '';
 var i=0;
-app.get('/submit-name1', function (req, res) {//URL:/subit-name?name=bkxbk
+app.get('/submit-name', function (req, res) {//URL:/subit-name?name=bkxbk
   //get the name from request
-  var name1= req.query.name1;
-  names1.push(name1);
-  while(i<names1.length)
+  var name= req.query.name;
+  names.push(name);
+  while(i<names.length)
   {
-  list +='<li>' +names1[i] + '</li>';
+  list +='<li>' +names[i] + '</li>';
   i++;
   }
   nam.content=list;
