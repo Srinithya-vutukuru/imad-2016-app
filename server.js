@@ -134,7 +134,7 @@ app.get('/submit-name1', function (req, res) {//URL:/subit-name?name=bkxbk
   var name1= req.query.name1;
   names1.push(name1);
   //json converts objects into strings and vice versa
-  nam.content=(JSON.stringify(names1));
+  nam.content=((names1));
   res.send(createTemplate(nam));
 });
 var count=0;
