@@ -152,14 +152,7 @@ app.get('/counter', function (req, res) {
   res.send(counter.toString());
 });
 
-/*var names = [];
-app.get('/submit-name', function (req, res) {//URL:/subit-name?name=bkxbk
-  //get the name from request
-  var name= req.query.name;
-  names.push(name);
-  //json converts objects into strings and vice versa
-  res.send(JSON.stringify(names));
-});*/
+
 var paras = [];
 app.get('/paras', function (req, res) {//URL:/paras?para=bkxbk
   //get the name from request
