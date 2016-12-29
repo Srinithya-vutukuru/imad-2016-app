@@ -68,14 +68,15 @@ function createComments(data){
         
         <body>
 		<div class = "container">
+		    <div class="right big bold">
+						<a href="/">HOME</a> 
+					</div>
 			<div class="center">
 				<img id='madi' src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTrQfNoqk1HpN8-Mly0r03xY5Cl0v1WFGQ67wraKbKEsillvj0uqQ" class="img-big"/>
 			</div>
 			<hr/>
 				<div class="content">
-					<div class="center big bold">
-						<a href="/">HOME</a> 
-					</div>
+					
 					<hr/>
 					<h3 class="center text-big bold">
 						${heading}
