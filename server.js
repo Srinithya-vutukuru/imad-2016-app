@@ -169,15 +169,16 @@ app.get('/paras', function (req, res) {//URL:/paras?para=bkxbk
   res.send(JSON.stringify(paras));
 });
 var names1 = [];
-
+var list = '';
 app.get('/submit-name1', function (req, res) {//URL:/subit-name?name=bkxbk
   //get the name from request
   var name1= req.query.name1;
   names1.push(name1);
   for(var i=0;i<names1.length;i++)
   {
-  nam.content[i]='<li>' +names1[i] + '</li>';
+  list +='<li>' +names1[i] + '</li>';
   }
+  nam.content=list;
   res.send(createComments(nam));
 });
 var count=0;
