@@ -174,8 +174,10 @@ app.get('/submit-name1', function (req, res) {//URL:/subit-name?name=bkxbk
   //get the name from request
   var name1= req.query.name1;
   names1.push(name1);
-   
-  nam.content=names1[0];	
+  for(var i=o;i<names1.length;i++)
+  {
+  nam.content[i]='<li>' +names1[i] + '</li>';
+  }
   res.send(createComments(nam));
 });
 var count=0;
