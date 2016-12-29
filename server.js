@@ -176,7 +176,7 @@ app.get('/submit-name1', function (req, res) {//URL:/subit-name?name=bkxbk
   var name1= req.query.name1;
   names1.push(name1);
    
-  nam.content=names1;	
+  nam.content=names1[0];	
   res.send(createComments(nam));
 });
 var count=0;
