@@ -74,8 +74,8 @@ subcom.onclick = function(){
 					//make a request and send the name
 					//capture the response and display it as list 
 	
-				var ul1 = document.getElementById('paragrap');
-				ul1.innerHTML = list1;
+				//var ul1 = document.getElementById('paragrap');
+				//ul1.innerHTML = list1;
 			}
 		}
 	};
