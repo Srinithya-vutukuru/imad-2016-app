@@ -162,12 +162,19 @@ app.get('/paras', function (req, res) {//URL:/paras?para=bkxbk
   res.send(JSON.stringify(paras));
 });
 var names = [];
-var list = '';
-var i=0;
-app.get('/submit-name', function (req, res) {//URL:/subit-name?name=bkxbk
+app.get('/submit-name', function (req, res) {//URL:/paras?para=bkxbk
   //get the name from request
   var name= req.query.name;
   names.push(name);
+  //json converts objects into strings and vice versa
+  res.send(JSON.stringify(names));
+});
+var list = '';
+var i=0;
+app.get('/submitname', function (req, res) {//URL:/subit-name?name=bkxbk
+  //get the name from request
+  //var name= req.query.name;
+  //names.push(name);
   while(i<names.length)
   {
   list +='<li>' +names[i] + '</li>';
