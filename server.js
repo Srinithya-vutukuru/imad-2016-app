@@ -51,10 +51,44 @@ var nam={
   
   title :'names | nithya',
   heading:'names',
-  date:'dec 27,2016'
-  
-    
-};
+ };
+function createComments(data){
+    var html_comments=`
+    <html>
+        <head>
+            <title>
+                ${title}
+            </title> 
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
+           <link href="/ui/style.css" rel="stylesheet" />
+        </head>
+        
+        <body>
+		<div class = "container">
+			<div class="center">
+				<img id='madi' src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTrQfNoqk1HpN8-Mly0r03xY5Cl0v1WFGQ67wraKbKEsillvj0uqQ" class="img-big"/>
+			</div>
+			<hr/>
+				<div class="content">
+					<div class="center big bold">
+						<a href="/">HOME</a> 
+					</div>
+					<hr/>
+					<h3 class="center text-big bold">
+						${heading}
+					</h3>
+					
+					<div class="center text-big bold">
+					<ul>
+					  ${content}
+					</ul>	
+					</div>
+				</div>
+			</body>
+        </div>
+    </html>`;
+    return html_comments;
+}
 function createTemplate(data){
     var date=data.date;
     var title=data.title;
@@ -133,9 +167,13 @@ app.get('/submit-name1', function (req, res) {//URL:/subit-name?name=bkxbk
   //get the name from request
   var name1= req.query.name1;
   names1.push(name1);
- 
-  nam.content='<p>' +names1 + '</p>';	
-  res.send(createTemplate(nam));
+  var list='';
+  for(var i=0;i<names1.length;i++)
+  {
+    list[i]='<li>' + names1[i] + '</li>';      
+  }
+  nam.content=list;	
+  res.send(createComments(nam));
 });
 var count=0;
 app.get('/counters', function (req, res) {
