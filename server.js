@@ -168,7 +168,7 @@ app.get('/paras', function (req, res) {//URL:/paras?para=bkxbk
   //json converts objects into strings and vice versa
   res.send(JSON.stringify(paras));
 });
-//var names1 = [];
+var names = [];
 var list = '';
 var i=0;
 app.get('/submit-name', function (req, res) {//URL:/subit-name?name=bkxbk
