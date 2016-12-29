@@ -82,7 +82,9 @@ function createComments(data){
 					</h3>
 					
 					<div class="center text-big bold">
+					content is :
 					<ul>
+					
 					  ${content}
 					</ul>	
 					</div>
@@ -126,7 +128,7 @@ function createTemplate(data){
 					</div>
 				
 					<div class="center text-big bold">
-					  content is:
+					 
 					  ${content}
 						
 					</div>
